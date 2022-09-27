@@ -96,8 +96,7 @@ jobs:
 
     - name: Upload coverage
       if: |
-        matrix.kind == 'latest' &&
-        github.repository_owner == 'stolostron'
+        matrix.kind == 'latest'
       uses: actions/upload-artifact@v3
       with:
         name: coverage
