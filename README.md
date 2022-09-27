@@ -1,5 +1,7 @@
 [comment]: # ( Copyright Contributors to the Open Cluster Management project )
 
+test
+
 # Configuration Policy Controller
 
 Open Cluster Management - Configuration Policy Controller
