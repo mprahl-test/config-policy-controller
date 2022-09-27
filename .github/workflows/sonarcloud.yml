@@ -1,7 +1,7 @@
 on:
   workflow_run:
     workflows:
-      - KinD tests (latest)
+      - KinD tests
     types:
       - completed
 
@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     if: |
       (github.event.workflow_run.event == 'push' || github.event.workflow_run.event == 'pull_request') &&
-      github.event.workflow_run.conclusion == 'success'
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow.name == 'KinD tests (latest)'
     steps:
       - name: Download the coverage report
         uses: actions/github-script@v6
