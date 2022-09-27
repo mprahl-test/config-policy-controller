@@ -101,8 +101,8 @@ jobs:
       with:
         name: coverage
         path: |
-          coverage*.out
-          gosec.json
+          config-policy-controller/coverage*.out
+          config-policy-controller/gosec.json
 
     - name: Debug
       if: ${{ failure() }}
