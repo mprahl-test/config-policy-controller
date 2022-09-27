@@ -9,7 +9,6 @@ jobs:
   sonarcloud:
     runs-on: ubuntu-latest
     if: |
-      github.repository.owner.login == 'stolostron' &&
       (github.event.workflow_run.event == 'push' || github.event.workflow_run.event == 'pull_request') &&
       github.event.workflow_run.conclusion == 'success' &&
       github.event.workflow.name == 'KinD tests (latest)'
